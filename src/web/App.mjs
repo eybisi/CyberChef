@@ -10,7 +10,6 @@ import Manager from "./Manager.mjs";
 import HTMLCategory from "./HTMLCategory.mjs";
 import HTMLOperation from "./HTMLOperation.mjs";
 import Split from "split.js";
-import moment from "moment-timezone";
 
 
 /**
@@ -592,9 +591,6 @@ class App {
      */
     setCompileMessage() {
         // Display time since last build and compile message
-        const now = new Date(),
-            msSinceCompile = now.getTime() - window.compileTime,
-            timeSinceCompile = moment.duration(msSinceCompile, "milliseconds").humanize();
 
         // Calculate previous version to compare to
         const prev = PKG_VERSION.split(".").map(n => {
@@ -606,7 +602,7 @@ class App {
 
         // const compareURL = `https://github.com/gchq/CyberChef/compare/v${prev.join(".")}...v${PKG_VERSION}`;
 
-        let compileInfo = `<a href='https://github.com/gchq/CyberChef/blob/master/CHANGELOG.md'>Last build: ${timeSinceCompile.substr(0, 1).toUpperCase() + timeSinceCompile.substr(1)} ago</a>`;
+        let compileInfo = `<a href="halflife.com">It's time to choose</a>`;
 
         if (window.compileMessage !== "") {
             compileInfo += " - " + window.compileMessage;

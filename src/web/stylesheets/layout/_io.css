@@ -197,6 +197,11 @@
     font-family: var(--fixed-width-font-family);
     font-size: var(--fixed-width-font-size);
     color: var(--fixed-width-font-colour);
+      background-image: url("../static/images/hl.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.008;
 }
 
 #input-highlighter,
